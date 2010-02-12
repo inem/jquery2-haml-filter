@@ -1,4 +1,4 @@
-module Haml::Filters::Jquery2
+module Haml::Filters::Jquery
   include Haml::Filters::Base
 
   def render_with_options(text, options)
