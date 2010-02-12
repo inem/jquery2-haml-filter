@@ -1,6 +1,6 @@
 if ( typeof $ != 'undefined' ) {
   $(document).ready(function(){
-    $("script[@type='text/jquery']").each(function(){
+    $("script[type='text/jquery']").each(function(){
       if ( this.src )
         $.get( this.src, function(src) {
           eval( parse( src ) );
@@ -9,17 +9,6 @@ if ( typeof $ != 'undefined' ) {
         eval( parse( this.firstChild.nodeValue )[1] );
     });
   });
-}
-
-function run(){
-  var d = parse( document.getElementById("text").value );
-  eval( d[1] );
-}
-
-function compile(){
-  var d = parse( document.getElementById("text").value );
-  document.getElementById("out").innerHTML = d[0];
-  document.getElementById("jq").innerHTML = d[1].replace(/</g, "&lt;");
 }
 
 function parse(string) {
