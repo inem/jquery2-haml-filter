@@ -1,1 +1,1 @@
-require "haml/filters/jquery2"
+require "haml/filters/jquery"
